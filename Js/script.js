@@ -3,7 +3,8 @@
   const themeBtn = document.querySelector('[data-theme-toggle]');
   const nav = document.querySelector('.nav');
   const menuBtn = document.querySelector('[data-menu-toggle]');
-  const storedTheme = localStorage.getItem('portfolio-theme');
+  let storedTheme = null;
+  try { storedTheme = localStorage.getItem('portfolio-theme'); } catch (_) {}
   const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   const initialTheme = storedTheme || (systemDark ? 'dark' : 'light');
 
@@ -18,7 +19,7 @@
 
   themeBtn?.addEventListener('click', () => {
     root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
-    localStorage.setItem('portfolio-theme', root.dataset.theme);
+    try { localStorage.setItem('portfolio-theme', root.dataset.theme); } catch (_) {}
     updateThemeIcon();
   });
 
