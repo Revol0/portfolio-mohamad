@@ -316,3 +316,26 @@ html[dir="rtl"] .dialog-copy h3 { margin: 0 0 0 36px; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 
 [hidden] { display: none !important; }
+
+/* V3.2: anonymous software project and current-employment dates. */
+.experience-date[dir="rtl"] { direction: rtl; }
+.development-project { margin-top: 22px; padding: 28px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.development-project-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+.development-project-head > div { min-width: 0; }
+.development-project h3 { margin: 6px 0 0; font-size: 1.13rem; line-height: 1.5; text-wrap: pretty; }
+.project-status { flex: 0 1 auto; margin: 0; padding: 6px 11px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-soft); color: var(--accent-deep); font-size: .73rem; font-weight: 700; }
+.development-description { margin: 14px 0 0; color: var(--muted); font-size: .86rem; max-width: 850px; }
+.development-details { margin: 20px 0 0; }
+.development-details > div { display: grid; grid-template-columns: 140px minmax(0,1fr); gap: 20px; padding: 15px 0; border-top: 1px solid var(--line); }
+.development-details dt { font-size: .8rem; font-weight: 700; }
+.development-details dd { margin: 0; color: var(--muted); font-size: .82rem; }
+.technology-tags { display: flex; flex-wrap: wrap; gap: 7px; list-style: none; padding: 0; margin: 0; }
+.technology-tags li { padding: 4px 9px; border: 1px solid var(--line); border-radius: 6px; font-size: .74rem; color: var(--text); background: var(--surface-soft); }
+@media (max-width: 740px) {
+  .development-project { margin-top: 16px; padding: 20px; }
+  .development-project-head { flex-direction: column; gap: 12px; }
+  .development-project h3 { font-size: 1rem; }
+  .development-details > div { grid-template-columns: 1fr; gap: 7px; padding: 13px 0; }
+  .development-description { font-size: .83rem; }
+}
+html[dir="rtl"] .experience-date { text-align: right; }
