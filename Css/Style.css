@@ -72,7 +72,7 @@ html[lang="en"] .section-kicker, html[lang="en"] .kicker { letter-spacing: .08em
 .brand-mark { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; background: var(--text); color: var(--bg); font-size: .72rem; font-weight: 900; letter-spacing: -.02em; }
 .brand-copy { display: grid; line-height: 1.2; }
 .brand-copy strong { font-size: .86rem; }
-.brand-copy span { margin-top: 3px; color: var(--muted); font-size: .68rem; direction: ltr; }
+.brand-copy span { margin-top: 3px; color: var(--muted); font-size: .68rem; }
 .nav { display: flex; align-items: center; gap: 2px; }
 .nav a { padding: 8px 10px; border-radius: 9px; color: var(--muted); font-size: .79rem; font-weight: 700; transition: background .18s ease, color .18s ease; }
 .nav a:hover, .nav a.active { color: var(--text); background: var(--surface); }
@@ -305,3 +305,14 @@ html[dir="rtl"] .dialog-copy h3 { margin: 0 0 0 36px; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .001ms !important; }
 }
+
+/* V3.1: content wrapping; no change to the established layout or color palette. */
+.hero-role { overflow-wrap: normal; word-break: normal; }
+.software-name, .software-item, .profile-list dd { min-width: 0; }
+.software-name strong { overflow-wrap: break-word; }
+.software-name span { line-height: 1.6; }
+.visual-footer { gap: 12px; }
+.visual-footer span { min-width: 0; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+[hidden] { display: none !important; }
